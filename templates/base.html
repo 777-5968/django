@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title%}school app{% endblock %}</title></head>
+<link rel="stylesheet" href="{% static 'external.css'%}">
+<body>
+<ul>
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about us' %}">About us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+
+
+
+</ul>
+<img src="{% static 'images/logo.png'%}" alt="logo">
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+</body>
+</html>
